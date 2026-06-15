@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" fill="none">
+<defs>
+  <radialGradient id="bg" cx="50%" cy="40%" r="68%"><stop offset="0" stop-color="#123a60" stop-opacity=".75"/><stop offset=".55" stop-color="#071827" stop-opacity=".35"/><stop offset="1" stop-color="#020812" stop-opacity="0"/></radialGradient>
+  <linearGradient id="cyan" x1="0" y1="0" x2="260" y2="190" gradientUnits="userSpaceOnUse"><stop stop-color="#58EAFF"/><stop offset=".52" stop-color="#00BDFE"/><stop offset="1" stop-color="#0A58FF"/></linearGradient>
+  <linearGradient id="green" x1="0" y1="0" x2="260" y2="190" gradientUnits="userSpaceOnUse"><stop stop-color="#7DFFAE"/><stop offset="1" stop-color="#0ACF62"/></linearGradient>
+  <filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="soft" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="160" height="120" rx="26" fill="url(#bg)"/>
+<g filter="url(#glow)">
+  <rect x="46" y="43" width="59" height="40" rx="10" fill="#07192A" stroke="url(#cyan)" stroke-width="4"/>
+  <path d="M59 43V31h35v12M105 54h18v18h-18M46 55H32v16h14" stroke="#58EAFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M61 82v14M91 82v14" stroke="#58EAFF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M64 64h24" stroke="#CFFAFF" stroke-width="5" stroke-linecap="round"/>
+  <path d="M102 20l7 13 15 3-11 10 2 15-13-7-14 7 3-15-11-10 15-3 7-13Z" fill="#66F6FF" opacity=".9"/>
+</g>
+</svg>
