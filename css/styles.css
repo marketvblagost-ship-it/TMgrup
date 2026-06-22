@@ -154,3 +154,40 @@ img{max-width:100%;display:block}
   .hero-bullets li{font-size:13px;line-height:1.25}
   .hero-image-frame{border-radius:16px}
 }
+
+
+/* FINAL FIXES: anchor offset, H2 System branding, mobile hero */
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+section[id]{scroll-margin-top:96px}
+#benefits,#how,#audience,#calc,#reviews,#faq,#contacts{scroll-margin-top:96px}
+.brand-title{white-space:nowrap}
+.header-phone a{font-size:17px}
+h1 em{display:inline!important}
+.hero h1{max-width:640px}
+.hero-image-frame img{display:block}
+@media (min-width:761px){
+  .hero h1{font-size:54px;line-height:1.04;letter-spacing:-1.35px}
+}
+@media (max-width:760px){
+  html{scroll-padding-top:78px}
+  section[id],#benefits,#how,#audience,#calc,#reviews,#faq,#contacts{scroll-margin-top:78px}
+  .site-header,.header-inner{height:64px!important}
+  .header-inner{gap:10px!important}
+  .brand-title{font-size:19px!important;letter-spacing:.2px!important}
+  .brand-subtitle{font-size:8px!important;letter-spacing:.45px!important;margin-top:5px!important}
+  .menu-toggle{width:40px!important;height:40px!important;min-width:40px!important;border-radius:12px!important}
+  .hero{padding-top:24px!important}
+  .eyebrow{max-width:100%;font-size:10.5px!important;line-height:1.25!important;padding:8px 10px!important;align-items:flex-start!important}
+  .hero h1{font-size:30px!important;line-height:1.12!important;letter-spacing:-.7px!important;margin-bottom:16px!important;max-width:100%!important}
+  .hero-lead{font-size:14.5px!important;line-height:1.45!important}
+  .hero-image-frame{border-radius:18px!important}
+  .hero-image-frame img{height:auto!important;min-height:0!important;object-fit:contain!important;object-position:center!important}
+  .neon-lines{display:none!important}
+  .h2-badge{left:12px!important;right:12px!important;bottom:12px!important;padding:10px 12px!important;justify-content:center!important}
+  .h2-badge span{font-size:12px!important;white-space:normal!important}
+  .h2-badge img{width:38px!important;height:38px!important}
+}
+@media (max-width:390px){
+  .hero h1{font-size:28px!important;line-height:1.13!important}
+  .eyebrow{font-size:10px!important}
+}

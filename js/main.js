@@ -17,6 +17,27 @@
     }));
   }
 
+  // Smooth anchor scroll with sticky header offset so section titles stay visible
+  qsa('a[href^="#"]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      const href = link.getAttribute('href');
+      if (!href || href === '#') return;
+      const target = qs(href);
+      if (!target) return;
+      event.preventDefault();
+      const header = qs('.site-header');
+      const offset = (header ? header.offsetHeight : 72) + 18;
+      const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+      if (nav && toggle) {
+        nav.classList.remove('is-open');
+        document.body.classList.remove('is-menu-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
