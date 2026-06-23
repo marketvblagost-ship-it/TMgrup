@@ -191,3 +191,277 @@ h1 em{display:inline!important}
   .hero h1{font-size:28px!important;line-height:1.13!important}
   .eyebrow{font-size:10px!important}
 }
+
+/* STICKY CONTACT BUTTONS FIX */
+.contact-svg{
+  width:24px;
+  height:24px;
+  display:block;
+}
+
+.contact-svg-phone path,
+.contact-svg-tg path{
+  fill:#fff;
+}
+
+.sticky-contacts{
+  position:fixed;
+  right:18px;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:3000;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.sticky-contact-btn{
+  width:56px;
+  height:56px;
+  border-radius:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 12px 28px rgba(0,0,0,.22);
+  transition:transform .18s, box-shadow .18s;
+  overflow:hidden;
+}
+
+.sticky-contact-btn:hover{
+  transform:translateX(-3px) scale(1.04);
+  box-shadow:0 16px 36px rgba(0,0,0,.30);
+}
+
+.sticky-contact-phone{
+  background:linear-gradient(135deg,#22C55E 0%,#16A34A 100%)!important;
+}
+
+.sticky-contact-tg{
+  background:#229ED9!important;
+}
+
+.sticky-contact-max{
+  background:#2F80ED!important;
+  background-image:linear-gradient(135deg,#22D3EE 0%,#2F80ED 45%,#7C3AED 100%)!important;
+}
+
+.sticky-contact-max .max-icon-img{
+  width:30px!important;
+  height:30px!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  background:transparent!important;
+  border-radius:0!important;
+  display:block!important;
+}
+
+.mobile-contact-bar{
+  display:none;
+}
+
+@media(max-width:860px){
+  body{
+    padding-bottom:84px;
+  }
+
+  .sticky-contacts{
+    display:none;
+  }
+
+  .mobile-contact-bar{
+    position:fixed;
+    left:10px;
+    right:10px;
+    bottom:10px;
+    z-index:3000;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:8px;
+    padding:8px;
+    border-radius:22px;
+    background:rgba(15,23,42,.92);
+    border:1px solid rgba(255,255,255,.12);
+    box-shadow:0 16px 40px rgba(0,0,0,.34);
+    backdrop-filter:blur(16px);
+  }
+
+  .mobile-contact-btn{
+    min-height:54px;
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    color:#fff;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:800;
+    overflow:hidden;
+  }
+
+  .mobile-contact-phone{
+    background:linear-gradient(135deg,#22C55E 0%,#16A34A 100%)!important;
+  }
+
+  .mobile-contact-tg{
+    background:#229ED9!important;
+  }
+
+  .mobile-contact-bar a.mobile-contact-btn.mobile-contact-max,
+  .mobile-contact-bar .mobile-contact-btn.mobile-contact-max,
+  a.mobile-contact-btn.mobile-contact-max{
+    background:#2F80ED!important;
+    background-image:linear-gradient(135deg,#22D3EE 0%,#2F80ED 45%,#7C3AED 100%)!important;
+    color:#ffffff!important;
+    border-color:rgba(255,255,255,.18)!important;
+    box-shadow:0 10px 24px rgba(47,128,237,.34)!important;
+    overflow:hidden!important;
+  }
+
+  .mobile-contact-bar a.mobile-contact-btn.mobile-contact-max .max-icon-img,
+  .mobile-contact-bar .mobile-contact-btn.mobile-contact-max .max-icon-img,
+  a.mobile-contact-btn.mobile-contact-max .max-icon-img{
+    width:22px!important;
+    height:22px!important;
+    max-width:22px!important;
+    max-height:22px!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    background:transparent!important;
+    border-radius:0!important;
+    flex:0 0 22px!important;
+  }
+
+  .mobile-contact-btn .contact-svg{
+    width:22px;
+    height:22px;
+  }
+}
+/* END STICKY CONTACT BUTTONS FIX */
+
+/* CONTACT BUTTONS 3D ANIMATION — lightweight CSS only */
+.sticky-contact-btn,
+.mobile-contact-btn{
+  position:relative;
+  isolation:isolate;
+  transform-style:preserve-3d;
+  border-top-color:rgba(255,255,255,.34)!important;
+  border-bottom-color:rgba(0,0,0,.26)!important;
+  box-shadow:
+    0 14px 30px rgba(0,0,0,.32),
+    inset 0 1px 0 rgba(255,255,255,.36),
+    inset 0 -8px 18px rgba(0,0,0,.18)!important;
+  animation:contactSoftPulse 3.4s ease-in-out infinite;
+}
+
+.sticky-contact-btn::before,
+.mobile-contact-btn::before{
+  content:"";
+  position:absolute;
+  inset:-40% -70%;
+  z-index:-1;
+  background:linear-gradient(115deg,transparent 34%,rgba(255,255,255,.42) 48%,rgba(255,255,255,.12) 58%,transparent 70%);
+  transform:translateX(-70%) rotate(0.001deg);
+  animation:contactShine 4.8s ease-in-out infinite;
+  pointer-events:none;
+}
+
+.sticky-contact-btn::after,
+.mobile-contact-btn::after{
+  content:"";
+  position:absolute;
+  inset:1px;
+  border-radius:inherit;
+  z-index:-1;
+  background:linear-gradient(180deg,rgba(255,255,255,.18),transparent 45%,rgba(0,0,0,.18));
+  pointer-events:none;
+}
+
+.sticky-contact-btn:hover,
+.mobile-contact-btn:hover{
+  transform:translateY(-2px) scale(1.045);
+  filter:saturate(1.08) brightness(1.04);
+}
+
+.sticky-contact-phone,
+.mobile-contact-phone{
+  box-shadow:
+    0 14px 32px rgba(22,163,74,.35),
+    0 0 18px rgba(34,197,94,.26),
+    inset 0 1px 0 rgba(255,255,255,.38),
+    inset 0 -8px 18px rgba(0,0,0,.18)!important;
+}
+
+.sticky-contact-tg,
+.mobile-contact-tg{
+  box-shadow:
+    0 14px 32px rgba(34,158,217,.34),
+    0 0 18px rgba(34,158,217,.25),
+    inset 0 1px 0 rgba(255,255,255,.38),
+    inset 0 -8px 18px rgba(0,0,0,.18)!important;
+}
+
+.sticky-contact-max,
+.mobile-contact-max{
+  background-size:180% 180%!important;
+  animation:contactSoftPulse 3.4s ease-in-out infinite, maxGradientFlow 6.2s ease-in-out infinite;
+  box-shadow:
+    0 14px 32px rgba(124,58,237,.34),
+    0 0 20px rgba(34,211,238,.22),
+    inset 0 1px 0 rgba(255,255,255,.38),
+    inset 0 -8px 18px rgba(0,0,0,.18)!important;
+}
+
+.sticky-contact-btn .contact-svg,
+.sticky-contact-btn .max-icon-img,
+.mobile-contact-btn .contact-svg,
+.mobile-contact-btn .max-icon-img{
+  position:relative;
+  z-index:2;
+  filter:drop-shadow(0 2px 4px rgba(0,0,0,.24));
+}
+
+@keyframes contactShine{
+  0%,62%{transform:translateX(-78%) skewX(-18deg);opacity:0}
+  68%{opacity:.95}
+  86%{transform:translateX(78%) skewX(-18deg);opacity:0}
+  100%{transform:translateX(78%) skewX(-18deg);opacity:0}
+}
+
+@keyframes contactSoftPulse{
+  0%,100%{filter:saturate(1) brightness(1);}
+  50%{filter:saturate(1.08) brightness(1.04);}
+}
+
+@keyframes maxGradientFlow{
+  0%,100%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+}
+
+@media(max-width:860px){
+  .mobile-contact-bar{
+    box-shadow:0 18px 42px rgba(0,0,0,.38), inset 0 1px 0 rgba(255,255,255,.08)!important;
+  }
+
+  .mobile-contact-btn{
+    transform:translateZ(0);
+  }
+
+  .mobile-contact-btn:active{
+    transform:scale(.98);
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .sticky-contact-btn,
+  .mobile-contact-btn,
+  .sticky-contact-btn::before,
+  .mobile-contact-btn::before,
+  .sticky-contact-max,
+  .mobile-contact-max{
+    animation:none!important;
+  }
+}
+/* END CONTACT BUTTONS 3D ANIMATION */
