@@ -3,12 +3,49 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="H2 System — водородные генераторы для легковых авто, грузового транспорта, спецтехники и автопарков. Расчёт экономии топлива. Отправка из г. Шахты, Ростовская область.">
+  <meta name="description" content="H2 System — водородные генераторы для легковых авто, микроавтобусов, грузового транспорта, автобусов и спецтехники. Расчёт экономии топлива. Отправка со складов по всей России через Ozon или Яндекс.Доставку.">
   <title>H2 System — водородные генераторы для экономии топлива</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=contacts-anim-v2">
+  <link rel="stylesheet" href="css/styles.css?v=round4-sticky-v1">
+
+  <style id="site-round3-fixes">
+    html,body{overflow-x:hidden;}
+    .nav-overlay{position:fixed;inset:0;background:transparent;z-index:4990;opacity:0;pointer-events:none;transition:opacity .2s ease;}
+    body.nav-open .nav-overlay{opacity:1;pointer-events:auto;}
+
+    .site-header{position:fixed!important;top:0!important;left:0!important;right:0!important;width:100%!important;z-index:5000!important;}
+    body{padding-top:72px;}
+    body.nav-open .main-nav{z-index:5010!important;}
+    @media (max-width:760px){body{padding-top:64px;}}
+    .nav-close{display:none;appearance:none;border:0;background:transparent;color:#fff;font:inherit;font-size:18px;font-weight:800;padding:0;margin:0 0 10px auto;align-items:center;gap:8px;cursor:pointer;}
+    .nav-close .x{width:22px;height:22px;display:inline-block;position:relative;}
+    .nav-close .x::before,.nav-close .x::after{content:"";position:absolute;left:10px;top:2px;width:2px;height:18px;background:#fff;border-radius:2px;}
+    .nav-close .x::before{transform:rotate(45deg);}
+    .nav-close .x::after{transform:rotate(-45deg);}
+    .menu-toggle.is-active span:nth-child(1){transform:translateY(8px) rotate(45deg);}
+    .menu-toggle.is-active span:nth-child(2){opacity:0;}
+    .menu-toggle.is-active span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
+    body.nav-open .main-nav .nav-close{display:flex;}
+    .hero-bullets{display:grid;gap:14px;}
+    .hero-bullets li{align-items:flex-start;}
+    .hero-bullets li img{margin-top:2px;flex:0 0 auto;}
+    .audience-thumb{position:relative;display:block;overflow:hidden;border-radius:20px 20px 0 0;}
+    .audience-thumb img{display:block;width:100%;height:auto;}
+    .logo-mask{position:absolute;display:block;border-radius:999px;background:radial-gradient(circle at 50% 40%, rgba(12,20,30,.95) 0%, rgba(6,12,20,.92) 70%, rgba(6,12,20,.88) 100%);box-shadow:0 0 0 2px rgba(7,16,28,.32);}
+    .audience-card:nth-child(1) .logo-mask{width:12%;aspect-ratio:1.4/1;left:34%;bottom:26%;}
+    .audience-card:nth-child(2) .logo-mask{width:11%;aspect-ratio:1.5/1;left:20%;bottom:31%;}
+    @media (max-width:860px){
+      .nav-close{display:flex;}
+      .hero-bullets{gap:12px;margin-bottom:18px;}
+      .hero-bullets li{font-size:15px;line-height:1.35;}
+      .hero-actions{margin-top:10px;}
+      .audience-card:nth-child(1) .logo-mask{left:34%;bottom:27%;width:12%;}
+      .audience-card:nth-child(2) .logo-mask{left:20%;bottom:31%;width:11%;}
+    }
+  </style>
+
 </head>
 <body>
   <div class="site-bg" aria-hidden="true"></div>
@@ -22,6 +59,7 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="main-nav" aria-label="Главное меню">
+        <button class="nav-close" type="button" aria-label="Закрыть меню"><span class="x" aria-hidden="true"></span><span>Закрыть</span></button>
         <a href="#benefits">Преимущества</a>
         <a href="#how">Как это работает</a>
         <a href="#audience">Для кого</a>
@@ -33,7 +71,7 @@
       <div class="header-contacts">
         <div class="header-place">
           <img src="assets/icons/location.svg" alt="" width="22" height="22">
-          <span>г. Шахты,<br>Ростовская область</span>
+          <span>Доставка<br>по всей России</span>
         </div>
         <div class="header-phone">
           <a href="tel:+79185707620">+7 918 570-76-20</a>
@@ -42,6 +80,7 @@
       </div>
     </div>
   </header>
+  <div class="nav-overlay" aria-hidden="true"></div>
 
   <main>
     <section class="hero section-clip">
@@ -54,7 +93,10 @@
             <li><img src="assets/icons/fuel_saving.svg" alt="">Экономия топлива</li>
             <li><img src="assets/icons/combustion.svg" alt="">Более полное сгорание</li>
             <li><img src="assets/icons/engine.svg" alt="">Мягче работа двигателя</li>
-            <li><img src="assets/icons/truck.svg" alt="">Для бензина, дизеля, грузовых авто и спецтехники</li>
+            <li><img src="assets/icons/truck.svg" alt="">Для двигателей на бензине, дизеле и газе</li>
+            <li><img src="assets/icons/engine.svg" alt="">Очищает цилиндро-поршневую группу</li>
+            <li><img src="assets/icons/chart.svg" alt="">Повышает крутящий момент</li>
+            <li><img src="assets/icons/thermometer.svg" alt="">Снижает температуру двигателя</li>
           </ul>
           <div class="hero-actions">
             <a class="btn btn-3d btn-green" href="#calc">Рассчитать экономию</a>
@@ -146,21 +188,21 @@
         <div class="process-panel reveal" aria-label="Этапы работы водородного генератора">
           <article class="process-step">
             <span class="process-num">1</span>
-            <h3>Подача воды</h3>
-            <div class="process-media"><img src="assets/images/how/step_01_water.webp" alt="Подача воды в генератор" loading="lazy"></div>
-            <p>Вода заливается в генератор.</p>
+            <h3>Подача раствора</h3>
+            <div class="process-media"><img src="assets/images/how/step_01_water.webp" alt="Подача солевого раствора в генератор" loading="lazy"></div>
+            <p>Солевой раствор заливается в генератор. Зимой дополнительно может использоваться этиловый спирт.</p>
           </article>
           <article class="process-step">
             <span class="process-num">2</span>
             <h3>Электролиз</h3>
             <div class="process-media"><img src="assets/images/how/step_02_h2.webp" alt="Получение водородно-кислородной смеси" loading="lazy"></div>
-            <p>Генератор превращает воду в водородную смесь.</p>
+            <p>Генератор превращает раствор в водородно-кислородную смесь.</p>
           </article>
           <article class="process-step">
             <span class="process-num">3</span>
             <h3>Подача в двигатель</h3>
             <div class="process-media"><img src="assets/images/how/step_03_engine.webp" alt="Подача водорода во впуск двигателя" loading="lazy"></div>
-            <p>Водород подаётся в двигатель вместе с воздухом.</p>
+            <p>Водород подаётся в корпус воздушного фильтра и далее поступает в двигатель вместе с воздухом.</p>
           </article>
           <article class="process-step">
             <span class="process-num">4</span>
@@ -194,11 +236,11 @@
           <p>Чем больше пробег — тем заметнее экономический эффект.</p>
         </div>
         <div class="audience-grid reveal">
-          <article class="audience-card"><img src="assets/images/clean/audience_light_car_clean.webp" alt="Легковые авто" loading="lazy"><h3>Легковые авто</h3><p>Город, трасса, смешанный режим.</p></article>
-          <article class="audience-card"><img src="assets/images/clean/audience_van_clean.webp" alt="Коммерческий транспорт" loading="lazy"><h3>Коммерческий транспорт</h3><p>Доставка, курьерские службы, фургоны.</p></article>
-          <article class="audience-card"><img src="assets/images/clean/audience_truck_clean.webp" alt="Грузовые автомобили" loading="lazy"><h3>Грузовые автомобили</h3><p>Тягачи, магистральные перевозки.</p></article>
-          <article class="audience-card"><img src="assets/images/clean/audience_special_clean.webp" alt="Спецтехника" loading="lazy"><h3>Спецтехника</h3><p>Строительство, карьеры, сельское хозяйство.</p></article>
-          <article class="audience-card"><img src="assets/images/clean/audience_bus_clean.webp" alt="Автопарки и перевозчики" loading="lazy"><h3>Автопарки и перевозчики</h3><p>Логистика, такси, сервисные компании.</p></article>
+          <article class="audience-card"><div class="audience-thumb"><img src="assets/images/clean/audience_light_car_clean.webp" alt="Легковые авто" loading="lazy"><span class="logo-mask" aria-hidden="true"></span></div><h3>Легковые авто</h3><p>Город, трасса, смешанный режим.</p></article>
+          <article class="audience-card"><div class="audience-thumb"><img src="assets/images/clean/audience_van_clean.webp" alt="Микроавтобусы" loading="lazy"><span class="logo-mask" aria-hidden="true"></span></div><h3>Микроавтобусы</h3><p>Пассажирские перевозки, сервис, доставка.</p></article>
+          <article class="audience-card"><div class="audience-thumb"><img src="assets/images/clean/audience_truck_clean.webp" alt="Грузовые автомобили" loading="lazy"></div><h3>Грузовые автомобили</h3><p>Тягачи, магистральные перевозки.</p></article>
+          <article class="audience-card"><div class="audience-thumb"><img src="assets/images/clean/audience_special_clean.webp" alt="Спецтехника" loading="lazy"></div><h3>Спецтехника</h3><p>Строительство, карьеры, сельское хозяйство.</p></article>
+          <article class="audience-card"><div class="audience-thumb"><img src="assets/images/clean/audience_bus_clean.webp" alt="Автобусы" loading="lazy"></div><h3>Автобусы</h3><p>Городские, междугородние и корпоративные перевозки.</p></article>
         </div>
       </div>
     </section>
@@ -238,7 +280,7 @@
           <article class="service-card"><img src="assets/icons/wrench.svg" alt=""><h3>Установка и настройка под ваш автомобиль</h3><p>Подбор режима под двигатель и эксплуатацию.</p></article>
           <article class="service-card"><img src="assets/icons/consultation.svg" alt=""><h3>Консультация перед установкой</h3><p>Оцениваем пробег, расход и ожидаемую окупаемость.</p></article>
           <article class="service-card"><img src="assets/icons/shield.svg" alt=""><h3>Поддержка после установки</h3><p>Помогаем с настройками и рекомендациями.</p></article>
-          <article class="service-card"><img src="assets/icons/gear.svg" alt=""><h3>Подбор решения под задачу</h3><p>Для легковых авто, грузовиков, спецтехники и автопарков.</p></article>
+          <article class="service-card"><img src="assets/icons/gear.svg" alt=""><h3>Подбор решения под задачу</h3><p>Для легковых авто, микроавтобусов, грузовиков, автобусов и спецтехники.</p></article>
         </div>
       </div>
     </section>
@@ -250,12 +292,12 @@
         </div>
         <div class="faq-list reveal">
           <details open>
-            <summary>Подходит ли для дизеля и бензина?</summary>
-            <p>Да. Решение применяется для бензиновых и дизельных двигателей. Подбор зависит от типа транспорта, объёма двигателя и режима эксплуатации.</p>
+            <summary>Подходит ли для двигателей на бензине, дизеле и газе?</summary>
+            <p>Да. Система подходит для двигателей на бензине, дизеле и газе. Подбор зависит от объёма двигателя, типа транспорта и режима эксплуатации.</p>
           </details>
           <details>
             <summary>Нужно ли сильно переделывать автомобиль?</summary>
-            <p>Нет. Установка не требует кардинальной переделки двигателя и проводится без серьёзных изменений конструкции.</p>
+            <p>Нет. Переделка двигателя не требуется. Система не врезается в топливную и электрическую системы: водородная смесь подаётся отдельно, через корпус воздушного фильтра.</p>
           </details>
           <details>
             <summary>Как быстро можно оценить эффект?</summary>
@@ -263,11 +305,11 @@
           </details>
           <details>
             <summary>Для кого решение особенно выгодно?</summary>
-            <p>Для тех, у кого большие пробеги, интенсивные нагрузки и высокие расходы на топливо: перевозчики, службы доставки, автопарки, спецтехника.</p>
+            <p>Для тех, у кого большие пробеги, интенсивные нагрузки и высокие расходы на топливо: грузовые авто, микроавтобусы, автобусы и спецтехника.</p>
           </details>
           <details>
             <summary>Откуда отправка?</summary>
-            <p>Отправляем генераторы из г. Шахты, Ростовская область. Доставка по России транспортными компаниями.</p>
+            <p>Отправляем генераторы со складов по всей России. Возможна отправка через Ozon или Яндекс.Доставку.</p>
           </details>
         </div>
       </div>
@@ -281,22 +323,14 @@
           <ul>
             <li>Бесплатный расчёт экономии</li>
             <li>Подбор оборудования под двигатель</li>
-            <li>Отправка из г. Шахты по России</li>
+            <li>Отправка со складов по всей России — через Ozon или Яндекс.Доставку</li>
           </ul>
         </div>
         <form class="lead-form">
           <h3>Оставьте заявку</h3>
-          <div class="lead-grid">
-            <input type="text" placeholder="Ваше имя" aria-label="Ваше имя">
-            <input type="tel" placeholder="Телефон" aria-label="Телефон">
-            <select aria-label="Тип транспорта">
-              <option>Тип транспорта</option>
-              <option>Легковой автомобиль</option>
-              <option>Коммерческий транспорт</option>
-              <option>Грузовой автомобиль</option>
-              <option>Спецтехника</option>
-              <option>Автопарк</option>
-            </select>
+          <div class="lead-grid lead-grid-simple">
+            <input name="name" type="text" placeholder="Ваше имя" aria-label="Ваше имя" autocomplete="name">
+            <input name="phone" type="tel" placeholder="Телефон" aria-label="Телефон" autocomplete="tel" required>
           </div>
           <div class="lead-actions">
             <button class="btn btn-3d btn-green" type="submit">Оставить заявку</button>
@@ -310,7 +344,7 @@
 
   
 <div class="sticky-contacts" aria-label="Быстрые контакты">
-  <a class="sticky-contact-btn sticky-contact-phone" href="tel:+79185007620" aria-label="Позвонить">
+  <a class="sticky-contact-btn sticky-contact-phone" href="tel:+79185707620" aria-label="Позвонить">
     <svg class="contact-svg contact-svg-phone" viewBox="0 0 24 24" aria-hidden="true">
       <path d="M6.6 10.8c1.5 3 3.6 5.1 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.3 1.3.4 2.6.6 4 .6.7 0 1.2.5 1.2 1.2v3.5c0 .7-.5 1.2-1.2 1.2C10.3 21.9 2.1 13.7 2.1 3.4c0-.7.5-1.2 1.2-1.2h3.5c.7 0 1.2.5 1.2 1.2 0 1.4.2 2.7.6 4 .1.4 0 .9-.3 1.2l-1.7 2.2Z"/>
     </svg>
@@ -328,7 +362,7 @@
 </div>
 
 <div class="mobile-contact-bar" aria-label="Быстрые контакты">
-  <a class="mobile-contact-btn mobile-contact-phone" href="tel:+79185007620" aria-label="Позвонить">
+  <a class="mobile-contact-btn mobile-contact-phone" href="tel:+79185707620" aria-label="Позвонить">
     <svg class="contact-svg contact-svg-phone" viewBox="0 0 24 24" aria-hidden="true">
       <path d="M6.6 10.8c1.5 3 3.6 5.1 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.3 1.3.4 2.6.6 4 .6.7 0 1.2.5 1.2 1.2v3.5c0 .7-.5 1.2-1.2 1.2C10.3 21.9 2.1 13.7 2.1 3.4c0-.7.5-1.2 1.2-1.2h3.5c.7 0 1.2.5 1.2 1.2 0 1.4.2 2.7.6 4 .1.4 0 .9-.3 1.2l-1.7 2.2Z"/>
     </svg>
@@ -352,7 +386,7 @@
     <div class="container footer-grid">
       <div>
         <a class="brand footer-brand" href="#top"><span class="brand-title">H2 <b>System</b></span><span class="brand-subtitle">Энергия эффективности</span></a>
-        <p>Водородные генераторы для экономии топлива.</p>
+        <p>Водородные генераторы для экономии топлива на бензине, дизеле и газе.</p>
       </div>
       <div class="footer-nav">
         <b>Навигация</b>
@@ -365,13 +399,50 @@
         <b>Контакты</b>
         <a href="tel:+79185707620">+7 918 570-76-20</a>
         <span>Пн–Сб 09:00–18:00</span>
-        <span>г. Шахты, Ростовская область</span>
-        <span>Отправка по России транспортными компаниями</span>
+        <span>Отправка со складов по всей России — через Ozon или Яндекс.Доставку</span>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js?v=contacts-anim-v2"></script>
-<!-- DEPLOY: animated sticky contacts 2026-06-23 v2 -->
+  <script src="js/main.js?v=round4-sticky-v1"></script>
+
+
+  <script>
+    (function(){
+      const body = document.body;
+      const toggle = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('.main-nav');
+      const overlay = document.querySelector('.nav-overlay');
+      const closeBtn = document.querySelector('.nav-close');
+      if(!toggle || !nav) return;
+      const openMenu = () => {
+        body.classList.add('nav-open');
+        nav.classList.add('open','is-open');
+        toggle.classList.add('is-active');
+        toggle.setAttribute('aria-expanded','true');
+      };
+      const closeMenu = () => {
+        body.classList.remove('nav-open');
+        nav.classList.remove('open','is-open');
+        toggle.classList.remove('is-active');
+        toggle.setAttribute('aria-expanded','false');
+      };
+      toggle.addEventListener('click', function(e){
+        e.stopPropagation();
+        if(body.classList.contains('nav-open')) closeMenu(); else openMenu();
+      });
+      if(closeBtn) closeBtn.addEventListener('click', function(e){ e.preventDefault(); closeMenu(); });
+      if(overlay) overlay.addEventListener('click', closeMenu);
+      document.addEventListener('click', function(e){
+        if(!body.classList.contains('nav-open')) return;
+        if(nav.contains(e.target) || toggle.contains(e.target)) return;
+        closeMenu();
+      });
+      nav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeMenu(); });
+    })();
+  </script>
+
+<!-- DEPLOY: H2-System round4 sticky-header-thermometer 2026-06-26 v1 -->
 </body>
 </html>
