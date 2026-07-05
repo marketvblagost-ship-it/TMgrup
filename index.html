@@ -44,9 +44,72 @@
       .audience-card:nth-child(1) .logo-mask{left:34%;bottom:27%;width:12%;}
       .audience-card:nth-child(2) .logo-mask{left:20%;bottom:31%;width:11%;}
     }
+  </style>
 
 
-    /* MAX icon fix: fill the button without black fields or inner padding */
+  <style id="h2-contact-links-and-max-icon-fix">
+    .contact-links-panel{
+      width:100%;
+      min-width:0;
+      padding:30px;
+      border:1px solid rgba(0,184,255,.28);
+      border-radius:22px;
+      background:linear-gradient(180deg,rgba(8,25,39,.9),rgba(7,18,31,.88));
+      box-shadow:0 20px 65px rgba(0,184,255,.12), inset 0 1px 0 rgba(255,255,255,.04);
+    }
+    .contact-links-panel h3{
+      margin:0 0 18px;
+      color:#fff;
+      font-size:30px;
+      line-height:1.15;
+      font-weight:800;
+    }
+    .contact-links{
+      display:grid;
+      gap:16px;
+    }
+    .contact-link{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      min-height:82px;
+      padding:16px 20px;
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:18px;
+      background:rgba(255,255,255,.06);
+      color:#fff;
+      text-decoration:none;
+      transition:transform .18s ease,border-color .18s ease,background .18s ease,box-shadow .18s ease;
+    }
+    .contact-link:hover{
+      transform:translateY(-2px);
+      border-color:rgba(0,184,255,.45);
+      background:rgba(255,255,255,.09);
+      box-shadow:0 14px 36px rgba(0,184,255,.16);
+    }
+    .contact-link-icon{
+      width:42px;
+      height:42px;
+      flex:0 0 42px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow:0 14px 32px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.18);
+    }
+    .contact-link-icon svg{
+      width:24px;
+      height:24px;
+      fill:#fff;
+      display:block;
+    }
+    .contact-link-icon.icon-phone{
+      background:linear-gradient(180deg,#2feb69,#0a9b3c);
+    }
+    .contact-link-icon.icon-tg{
+      background:linear-gradient(180deg,#3fc7ff,#1687d6);
+    }
     .contact-link-icon.icon-max{
       width:42px!important;
       height:42px!important;
@@ -55,7 +118,6 @@
       border-radius:12px!important;
       background:linear-gradient(135deg,#22D3EE 0%,#2F80ED 45%,#7C3AED 100%)!important;
     }
-
     .contact-link-icon.icon-max .max-icon-img{
       width:100%!important;
       height:100%!important;
@@ -66,7 +128,25 @@
       border-radius:12px!important;
       display:block!important;
     }
-
+    .contact-link-content{
+      display:grid;
+      gap:4px;
+      min-width:0;
+    }
+    .contact-link-title{
+      color:rgba(221,234,246,.62);
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .contact-link-text{
+      color:#fff;
+      font-size:20px;
+      line-height:1.2;
+      font-weight:800;
+      overflow-wrap:anywhere;
+    }
     .sticky-contact-max{
       width:56px!important;
       height:56px!important;
@@ -75,7 +155,6 @@
       border-radius:18px!important;
       background:linear-gradient(135deg,#22D3EE 0%,#2F80ED 45%,#7C3AED 100%)!important;
     }
-
     .sticky-contact-max .max-icon-img{
       width:100%!important;
       height:100%!important;
@@ -87,6 +166,32 @@
       display:block!important;
     }
 
+    .mobile-contact-max{
+      padding:0!important;
+      overflow:hidden!important;
+      background:linear-gradient(135deg,#22D3EE 0%,#2F80ED 45%,#7C3AED 100%)!important;
+    }
+    .mobile-contact-max .max-icon-img{
+      width:28px!important;
+      height:28px!important;
+      max-width:none!important;
+      max-height:none!important;
+      object-fit:cover!important;
+      object-position:center!important;
+      border-radius:8px!important;
+      display:block!important;
+    }
+    @media (max-width:860px){
+      .contact-links-panel{padding:22px;border-radius:20px;}
+      .contact-links-panel h3{font-size:26px;}
+      .contact-link{min-height:76px;padding:14px 16px;gap:14px;}
+      .contact-link-text{font-size:18px;}
+    }
+    @media (max-width:480px){
+      .contact-links-panel{padding:18px;}
+      .contact-link{min-height:70px;border-radius:16px;}
+      .contact-link-text{font-size:16px;}
+    }
   </style>
 
 </head>
@@ -362,25 +467,51 @@
       <div class="container final-box reveal">
         <div class="final-copy">
           <h2>Начните экономить на топливе, а не переплачивайте за каждую поездку</h2>
-          <p>Оставьте заявку — рассчитаем потенциальную экономию и подберём решение под ваш транспорт.</p>
+          <p>Позвоните или напишите в Telegram/MAX — рассчитаем потенциальную экономию и подберём решение под ваш транспорт.</p>
           <ul>
             <li>Бесплатный расчёт экономии</li>
             <li>Подбор оборудования под двигатель</li>
             <li>Отправка со складов по всей России — через Ozon или Яндекс.Доставку</li>
           </ul>
         </div>
-        <form class="lead-form">
-          <h3>Оставьте заявку</h3>
-          <div class="lead-grid lead-grid-simple">
-            <input name="name" type="text" placeholder="Ваше имя" aria-label="Ваше имя" autocomplete="name">
-            <input name="phone" type="tel" placeholder="Телефон" aria-label="Телефон" autocomplete="tel" required>
+        <div class="contact-links-panel" aria-label="Контакты для связи">
+          <h3>Связаться</h3>
+          <div class="contact-links">
+            <a class="contact-link" href="tel:+79185707620" aria-label="Позвонить">
+              <span class="contact-link-icon icon-phone" aria-hidden="true">
+                <svg class="contact-svg contact-svg-phone" viewBox="0 0 24 24">
+                  <path d="M6.6 10.8c1.5 3 3.6 5.1 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.3 1.3.4 2.6.6 4 .6.7 0 1.2.5 1.2 1.2v3.5c0 .7-.5 1.2-1.2 1.2C10.3 21.9 2.1 13.7 2.1 3.4c0-.7.5-1.2 1.2-1.2h3.5c.7 0 1.2.5 1.2 1.2 0 1.4.2 2.7.6 4 .1.4 0 .9-.3 1.2l-1.7 2.2Z"/>
+                </svg>
+              </span>
+              <span class="contact-link-content">
+                <span class="contact-link-title">Телефон</span>
+                <strong class="contact-link-text">+7 918 570-76-20</strong>
+              </span>
+            </a>
+
+            <a class="contact-link" href="https://t.me/evgeniy_prilipa" target="_blank" rel="noopener" aria-label="Написать в Telegram">
+              <span class="contact-link-icon icon-tg" aria-hidden="true">
+                <svg class="contact-svg contact-svg-tg" viewBox="0 0 240 240">
+                  <path d="M96.3 154.7 92.4 209c5.6 0 8-2.4 10.9-5.3l26.2-25 54.3 39.8c10 5.5 17 2.6 19.7-9.2L239.2 42c3.2-14.8-5.4-20.6-15.1-17L14.5 105.8c-14.3 5.6-14.1 13.6-2.4 17.2l53.6 16.7L190.2 61c5.9-3.9 11.3-1.7 6.9 2.2L96.3 154.7Z"/>
+                </svg>
+              </span>
+              <span class="contact-link-content">
+                <span class="contact-link-title">Telegram</span>
+                <strong class="contact-link-text">Написать в Telegram</strong>
+              </span>
+            </a>
+
+            <a class="contact-link" href="https://max.ru/u/f9LHodD0cOLMvleAPsqZnsaJ9vPs30dm-RTrZbMofRKqOAf3nxSUuD5uG0U" target="_blank" rel="noopener" aria-label="Написать в MAX">
+              <span class="contact-link-icon icon-max" aria-hidden="true">
+                <img class="max-icon-img" src="max_icon.png" alt="" aria-hidden="true">
+              </span>
+              <span class="contact-link-content">
+                <span class="contact-link-title">MAX</span>
+                <strong class="contact-link-text">Написать в MAX</strong>
+              </span>
+            </a>
           </div>
-          <div class="lead-actions">
-            <button class="btn btn-3d btn-green" type="submit">Оставить заявку</button>
-            <a class="btn btn-3d btn-blue" href="tel:+79185707620">Получить консультацию</a>
-          </div>
-          <p class="micro-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
-        </form>
+        </div>
       </div>
     </section>
   </main>
@@ -486,6 +617,6 @@
     })();
   </script>
 
-<!-- DEPLOY: H2-System round4 sticky-header-thermometer 2026-06-26 v1 -->
+<!-- DEPLOY: H2-System round5 contacts-max-official 2026-07-05 v1 -->
 </body>
 </html>
